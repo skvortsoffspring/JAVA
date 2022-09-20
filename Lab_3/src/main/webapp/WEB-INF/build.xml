@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<project name="Lab_3" default="copy" basedir=".">
+
+    <property environment="env"/>
+    <property name="project.name" value="Lab_3"/>
+    <property name="java.home" value="${env.JAVA_HOME}"/>
+    <property name="tomcat.home" value="${env.CATALINA_HOME}"/>
+    <property name="ant.home"  value="${env.ANT_HOME}"/>
+    <property name="project.home" value="../../" />
+    <property name="dist.home" value="webapps/${project.name}" />
+    <property name="build.classes" value="${tomcat.home}/webapps/${project.name}/WEB-INF/classes" />
+
+
+    <target name = "create" description = "create directories">
+        <delete dir="${tomcat.home}/${dist.home}" />
+        <mkdir dir="${tomcat.home}/${dist.home}" />
+        <mkdir dir="${tomcat.home}/${dist.home}/images" />
+        <mkdir dir="${tomcat.home}/${dist.home}/WEB-INF" />
+        <mkdir dir="${build.classes}" />
+    </target>
+
+    <target name = "compile" depends="create">
+        <javac srcdir="${project.home}"
+               destdir="${build.classes}"
+        >
+            <classpath>
+                <fileset dir="${tomcat.home}/lib/">
+                    <include name="*.jar" />
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name = "copy" depends="compile" description = "Copying files">
+        <copy todir="${tomcat.home}/${dist.home}/WEB-INF">
+            <fileset dir="${project.home}/webapp/WEB-INF" />
+        </copy>
+        <copy todir="${tomcat.home}/${dist.home}" file="../index.jsp"/>
+        <copy todir="${tomcat.home}/${dist.home}" file="../doubleForward.jsp"/>
+    </target>
+
+</project>

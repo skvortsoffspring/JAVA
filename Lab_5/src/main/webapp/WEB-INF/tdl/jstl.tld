@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+    <tlib-version>1.0</tlib-version>
+    <short-name>x</short-name>
+    <uri>custom.uri.tags</uri>
+
+    <tag>
+        <name>form</name>
+        <tag-class>com.example.lab_5.tag.Dossier</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>action</name>
+        </attribute>
+        <attribute>
+            <name>method</name>
+        </attribute>
+        <attribute>
+            <name>uri</name>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>surname</name>
+        <tag-class>com.example.lab_5.tag.Surname</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+    <tag>
+        <name>lastname</name>
+        <tag-class>com.example.lab_5.tag.Lastname</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+    <tag>
+        <name>submit</name>
+        <tag-class>com.example.lab_5.tag.Submit</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+        <name>sex</name>
+        <tag-class>com.example.lab_5.tag.Sex</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>params</name>
+        </attribute>
+    </tag>
+
+</taglib>
