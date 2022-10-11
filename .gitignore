@@ -6,6 +6,10 @@ target/
 ### IntelliJ IDEA ###
 .idea/
 .idea/modules.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/webContexts.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
@@ -40,4 +44,5 @@ build/
 
 
 ### JAVA ###
-*mvnw
+mvnw.cmd
+mvnw

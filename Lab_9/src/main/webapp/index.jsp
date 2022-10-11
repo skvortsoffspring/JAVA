@@ -2,12 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Lab 9</title>
 </head>
 <body>
-<h1><%= "Lab 8" %>
+<h1><%= "Lab 9" %>
 </h1>
 <br/>
-<a href="http://localhost:8080/Lab_8/aaa">Go to servlet AAA</a>
+<a href="Ccc">Go to servlet Ccc</a>
+<br>
+<a href="Ccc.jsp">Go to page Ccc.jsp</a>
 </body>
 </html>

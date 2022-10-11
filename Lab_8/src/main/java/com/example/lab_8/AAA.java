@@ -21,7 +21,7 @@ public class AAA extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        var httpPost = new HttpGet("http://localhost:8080/Lab_8/bbb");
+        var httpPost = new HttpPost("http://localhost:8080/Lab_8/bbb");
 
         URI uri = null;
         try {

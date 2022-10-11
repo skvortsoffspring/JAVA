@@ -2,10 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Lab 7</title>
 </head>
 <body>
-<a href="params.jsp">get page contains params</a>
 
 <form action="${pageContext.request.contextPath}/Ccc" method="post">
     <label>

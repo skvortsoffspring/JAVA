@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <!-- filter fo servlet Ccc -->
+    <filter>
+        <filter-name>f1</filter-name>
+        <filter-class>com.example.lab_9.filter.F1</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f1</filter-name>
+        <url-pattern>/Ccc</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>f2</filter-name>
+        <filter-class>com.example.lab_9.filter.F2</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f2</filter-name>
+        <url-pattern>/Ccc</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>f3</filter-name>
+        <filter-class>com.example.lab_9.filter.F3</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f3</filter-name>
+        <url-pattern>/Ccc</url-pattern>
+    </filter-mapping>
+    <!-- end filter fo servlet Ccc -->
+
+    <filter>
+        <filter-name>f2JSP</filter-name>
+        <filter-class>com.example.lab_9.filter.F2JSP</filter-class>
+    </filter>
+    
+    <listener>
+        <listener-class>com.example.lab_9.listener.L1</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.example.lab_9.listener.L2</listener-class>
+    </listener>
+
+    <filter-mapping>
+        <filter-name>f2JSP</filter-name>
+        <url-pattern>/Ccc.jsp</url-pattern>
+    </filter-mapping>
+</web-app>

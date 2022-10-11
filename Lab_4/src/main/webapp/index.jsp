@@ -27,15 +27,15 @@
     </c:otherwise>
 </c:choose>
 
+<table border="1" width="300">
 <c:forEach var="i" begin="0" end="6">
-    <table border="1" width="300">
         <tr>
             <td><c:out value="${df.format(date.getTime())}"/></td>
             <td width="100"><c:out value="${wf.format(date.getTime())}"/></td>
         </tr>
-    </table>
     <c:set var="day" value="${date.add(DATE, 1)}"/>
 </c:forEach>
+</table>
 
 <c:set var="hour" value="${param.hour}"/>
 <c:out value="${requestScope.get('hour')}"/>
